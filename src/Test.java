@@ -1,4 +1,5 @@
 import aoc2021day1.Part1;
+import aoc2021day1.Part2;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -19,7 +20,7 @@ public class Test {
 
         }
 
-        Part1 solution = new Part1(lines);
+        Part2 solution = new Part2(lines);
         System.out.println(solution.solve());
     }
 }
