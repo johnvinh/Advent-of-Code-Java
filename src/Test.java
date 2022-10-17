@@ -1,6 +1,3 @@
-import aoc2021day1.Part1;
-import aoc2021day1.Part2;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -20,7 +17,7 @@ public class Test {
 
         }
 
-        Part2 solution = new Part2(lines);
+        aoc2021day2.Part1 solution = new aoc2021day2.Part1(lines);
         System.out.println(solution.solve());
     }
 }
