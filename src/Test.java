@@ -17,7 +17,7 @@ public class Test {
 
         }
 
-        aoc2021day2.Part1 solution = new aoc2021day2.Part1(lines);
+        aoc2021day2.Part2 solution = new aoc2021day2.Part2(lines);
         System.out.println(solution.solve());
     }
 }
