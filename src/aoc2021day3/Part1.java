@@ -54,37 +54,24 @@ public class Part1 {
     public int solve() {
         int gammaRate = 0;
         int epsilonRate = 0;
-        HashMap<String, Integer> bit1 = new HashMap<>();
-        HashMap<String, Integer> bit2 = new HashMap<>();
-        HashMap<String, Integer> bit3 = new HashMap<>();
-        HashMap<String, Integer> bit4 = new HashMap<>();
-        HashMap<String, Integer> bit5 = new HashMap<>();
+        HashMap[] bits = new HashMap[BIT_COUNT];
+
+        for (int i = 0; i < BIT_COUNT; i++) {
+            bits[i] = new HashMap<String, Integer>();
+        }
         // each line
         for (int i = 0; i < input.size(); i++) {
             // each character in line
             for (int j = 0; j < input.get(i).length(); j++) {
-                switch (j) {
-                    case 0:
-                        incrementBitCount(bit1, input.get(i).charAt(j));
-                    case 1:
-                        incrementBitCount(bit2, input.get(i).charAt(j));
-                    case 2:
-                        incrementBitCount(bit3, input.get(i).charAt(j));
-                    case 3:
-                        incrementBitCount(bit4, input.get(i).charAt(j));
-                    case 4:
-                        incrementBitCount(bit5, input.get(i).charAt(j));
-                }
+                incrementBitCount(bits[j], input.get(i).charAt(j));
             }
         }
 
         StringBuilder binaryNumberString = new StringBuilder();
 
-        addMoreCommonBit(bit1, binaryNumberString);
-        addMoreCommonBit(bit2, binaryNumberString);
-        addMoreCommonBit(bit3, binaryNumberString);
-        addMoreCommonBit(bit4, binaryNumberString);
-        addMoreCommonBit(bit5, binaryNumberString);
+        for (int i = 0; i < BIT_COUNT; i++) {
+            addMoreCommonBit(bits[i], binaryNumberString);
+        }
 
         String gammaRateStr = binaryNumberString.toString();
         String epsilonRateStr = invertBinaryNumber(gammaRateStr);
