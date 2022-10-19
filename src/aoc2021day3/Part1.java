@@ -31,17 +31,9 @@ public class Part1 {
 
     private void incrementBitCount(HashMap<String, Integer> bit, char binary) {
         if (binary == '1') {
-            if (bit.containsKey("1")) {
-                bit.put("1", bit.get("1") + 1);
-            } else {
-                bit.put("1", 1);
-            }
+            bit.put("1", bit.getOrDefault("1", 0) + 1);
         } else {
-            if (bit.containsKey("0")) {
-                bit.put("0", bit.get("0") + 1);
-            } else {
-                bit.put("0", 1);
-            }
+            bit.put("0", bit.getOrDefault("0", 0) + 1);
         }
     }
 
