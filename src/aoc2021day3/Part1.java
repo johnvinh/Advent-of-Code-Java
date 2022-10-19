@@ -41,7 +41,7 @@ public class Part1 {
 
     public int convertToDecimal(String binaryString) {
         int sum = 0;
-        int exponent = 4;
+        int exponent = BIT_COUNT - 1;
         for (int i = 0; i < binaryString.length(); i++) {
             if (binaryString.charAt(i) == '1') {
                 sum += Math.pow(2, exponent);
