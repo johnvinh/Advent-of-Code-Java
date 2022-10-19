@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Part1 {
+    private final int BIT_COUNT;
     ArrayList<String> input;
-    public Part1(ArrayList<String> input) {
+    public Part1(ArrayList<String> input, int bitCount) {
         this.input = input;
+        this.BIT_COUNT = bitCount;
     }
 
     private void addMoreCommonBit(HashMap<String, Integer> bit, StringBuilder binaryNumber) {
