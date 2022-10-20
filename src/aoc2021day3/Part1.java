@@ -75,8 +75,6 @@ public class Part1 {
 
         String gammaRateStr = binaryNumberString.toString();
         String epsilonRateStr = invertBinaryNumber(gammaRateStr);
-        System.out.println("Gamma Rate: " + gammaRateStr);
-        System.out.println("Epsilon Rate: " + epsilonRateStr);
         gammaRate = convertToDecimal(gammaRateStr);
         epsilonRate = convertToDecimal(epsilonRateStr);
 
