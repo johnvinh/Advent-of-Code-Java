@@ -14,7 +14,9 @@ public class Test {
                 lines.add(line);
             }
         } catch (IOException e) {
-
+            System.out.println("There was an error reading the file!");
+            e.printStackTrace();
+            System.exit(1);
         }
 
         aoc2021day3.Part1 solution = new aoc2021day3.Part1(lines, 12);
