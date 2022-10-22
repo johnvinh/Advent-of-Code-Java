@@ -8,4 +8,8 @@ public class Part2 {
     Part2(ArrayList<String> input) {
         this.input = input;
     }
+
+    public int solve() {
+        return 0;
+    }
 }
