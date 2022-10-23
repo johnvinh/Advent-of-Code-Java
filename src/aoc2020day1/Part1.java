@@ -10,6 +10,11 @@ public class Part1 {
     }
 
     public int solve() {
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+
+        for (String inputLine : input) {
+            numbers.add(Integer.parseInt(inputLine));
+        }
         return 0;
     }
 }
