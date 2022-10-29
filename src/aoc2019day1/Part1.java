@@ -10,6 +10,12 @@ public class Part1 {
     }
 
     public int solve() {
-        return 0;
+        int fuelSum = 0;
+        for (String line : input) {
+            int mass = Integer.parseInt(line);
+            int fuel = (int) Math.floor(mass / 3.0) - 2;
+            fuelSum += fuel;
+        }
+        return fuelSum;
     }
 }
