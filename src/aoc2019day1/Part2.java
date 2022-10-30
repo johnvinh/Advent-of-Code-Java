@@ -10,6 +10,19 @@ public class Part2 {
     }
 
     public int solve() {
-        return 0;
+        int totalFuel = 0;
+        for (String line : input) {
+            int moduleMass = Integer.parseInt(line);
+            int fuel = (int) (Math.floor(moduleMass / 3.0) - 2);
+            totalFuel += fuel;
+            while (fuel >= 0) {
+                fuel = (int) (Math.floor(fuel / 3.0) - 2);
+                if (fuel <= 0) {
+                    break;
+                }
+                totalFuel += fuel;
+            }
+        }
+        return totalFuel;
     }
 }

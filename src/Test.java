@@ -19,7 +19,7 @@ public class Test {
             System.exit(1);
         }
 
-        aoc2019day1.Part1 solution = new aoc2019day1.Part1(lines);
+        aoc2019day1.Part2 solution = new aoc2019day1.Part2(lines);
         System.out.println(solution.solve());
     }
 }
