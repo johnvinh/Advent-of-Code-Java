@@ -9,6 +9,15 @@ public class Part1 {
         this.input = input;
     }
 
+    private ArrayList<Integer> stringToIntArray(String str) {
+        String[] strSplit = str.split(",");
+        ArrayList<Integer> numbers = new ArrayList<>();
+        for (int i = 0; i < strSplit.length; i++) {
+            numbers.add(Integer.parseInt(strSplit[i]));
+        }
+        return numbers;
+    }
+
     public int solve() {
         return 0;
     }
