@@ -9,7 +9,7 @@ public class Part1 {
         this.input = input;
     }
 
-    private ArrayList<Integer> stringToIntArray(String str) {
+    public static ArrayList<Integer> stringToIntArray(String str) {
         String[] strSplit = str.split(",");
         ArrayList<Integer> numbers = new ArrayList<>();
         for (int i = 0; i < strSplit.length; i++) {
