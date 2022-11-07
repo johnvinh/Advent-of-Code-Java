@@ -10,9 +10,8 @@ public class Part1 {
     }
 
     public int solve() {
-        ArrayList<Integer> numbers = new ArrayList<>();
-        for (int i = 0; i < input.size(); i++) {
-            numbers.add(Integer.parseInt(input.get(i)));
+        for (int i = 0; i < input.get(0).length(); i++) {
+            
         }
         return 0;
     }
