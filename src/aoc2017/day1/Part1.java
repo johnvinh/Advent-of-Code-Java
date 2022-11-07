@@ -10,9 +10,15 @@ public class Part1 {
     }
 
     public int solve() {
-        for (int i = 0; i < input.get(0).length(); i++) {
-            
+        String line = input.get(0);
+        int sum = 0;
+        for (int i = 0; i < line.length(); i++) {
+            char currentNumber = line.charAt(i);
+            char nextNumber = line.charAt((i + 1) % line.length());
+            if (currentNumber == nextNumber) {
+                sum += Integer.parseInt(String.valueOf(currentNumber));
+            }
         }
-        return 0;
+        return sum;
     }
 }
