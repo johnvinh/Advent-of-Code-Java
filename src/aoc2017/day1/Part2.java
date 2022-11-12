@@ -9,4 +9,8 @@ public class Part2 {
     public Part2(ArrayList<String> input) {
         this.input = input;
     }
+
+    public int solve() {
+        return 0;
+    }
 }
